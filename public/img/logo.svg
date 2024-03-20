@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16.9332mm" height="5.9266mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1693 593"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:none}
+    .fil3 {fill:#ED3237}
+    .fil1 {fill:#00AFEF}
+    .fil2 {fill:url(#id0)}
+    .fnt0 {font-weight:normal;font-size:281px;font-family:'Bell MT'}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="864" y1="540" x2="871" y2="343">
+   <stop offset="0" style="stop-opacity:1; stop-color:#ED3237"/>
+   <stop offset="0.25098" style="stop-opacity:1; stop-color:#EABBC4"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#00AFEF"/>
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="1693" height="593"/>
+  <g id="_2181897961920">
+   <text x="34" y="323"  class="fil1 fnt0">Yayasan</text>
+   <g transform="matrix(0.548269 0 0 1 -384.566 237.458)">
+    <text x="847" y="296"  class="fil2 fnt0">Amanah Batasa Bakhtera</text>
+   </g>
+   <polygon class="fil3" points="1062,206 1060,222 1074,229 1058,232 1056,248 1048,234 1033,237 1044,225 1036,211 1051,218 "/>
+   <polygon class="fil3" points="1123,136 1121,152 1136,159 1120,162 1118,178 1110,164 1094,167 1105,155 1097,141 1112,148 "/>
+   <polygon class="fil3" points="1165,222 1163,232 1172,236 1163,238 1161,248 1157,239 1147,241 1154,234 1149,225 1158,229 "/>
+   <polygon class="fil3" points="1227,243 1225,259 1240,266 1224,269 1222,285 1214,270 1198,273 1209,262 1202,248 1216,254 "/>
+   <polygon class="fil3" points="1103,271 1101,281 1110,285 1101,287 1099,297 1094,288 1085,290 1092,283 1087,274 1096,278 "/>
+   <polygon class="fil3" points="1223,165 1221,181 1235,188 1219,191 1217,207 1209,193 1194,196 1205,184 1197,170 1212,177 "/>
+   <polygon class="fil3" points="1325,175 1322,197 1342,207 1320,211 1317,233 1307,214 1285,218 1300,202 1289,182 1309,192 "/>
+   <polygon class="fil3" points="1344,56 1340,90 1371,105 1337,111 1333,146 1316,115 1283,122 1306,97 1290,66 1321,81 "/>
+   <polygon class="fil3" points="1366,181 1365,191 1374,195 1364,197 1363,207 1358,198 1348,200 1355,193 1350,184 1359,188 "/>
+   <polygon class="fil3" points="1245,90 1243,104 1255,110 1242,112 1240,126 1233,114 1220,116 1229,106 1223,94 1235,100 "/>
+  </g>
+ </g>
+</svg>
