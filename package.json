@@ -2,7 +2,11 @@
   "devDependencies": {
     "tailwindcss": "^3.4.1"
   },
+  "type": "module",
   "scripts": {
-    "dev":"npx tailwindcss -i ./public/directives.css -o ./public/css/tailwindcss.css --watch"
+    "dev": "npx tailwindcss -i ./public/directives.css -o ./public/css/tailwindcss.css --watch"
+  },
+  "dependencies": {
+    "preline": "^2.0.3"
   }
 }

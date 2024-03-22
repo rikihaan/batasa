@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/Views/**/*.{php,html,js,jsx}"],
+  content: ["./app/Views/**/*.{php,html,js,jsx}",'node_modules/preline/dist/*.js'],
   theme: {
     extend: {
       size:{
@@ -8,6 +8,9 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('preline/plugin.d.ts'),
+
+  ],
 }
 
