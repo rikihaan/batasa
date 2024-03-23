@@ -11,163 +11,128 @@
 </head>
 <body>
     <!-- navabar -->
-    <nav class="py-9 px-4 opacity-75" x-data="{navOpen:false}">
-        <div class="container mx-auto">
-            <div class="flex justify-between items-center">
-                <img src="<?=base_url("img/logo.svg")?>" alt="logo" class="w-[36%] sm:w-[23%] lg:w-[18%] order-1 sm:order-2">
-                <ion-icon @click="navOpen = !navOpen" name="menu-outline" class="lg:hidden text-4xl text-sky-600 sm:order-1 order-3"></ion-icon>
-                <div class="order-2 hidden lg:block">
-                    <ul class="flex gap-16">
-                        <li>
-                            <a href="#" class="text-gray-500 font-bold">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-gray-500 font-bold opacity-50 hover:opacity-100">Profil</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-gray-500 font-bold opacity-50 hover:opacity-100">Galery</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-gray-500 font-bold opacity-50 hover:opacity-100">Kontak</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="order-2 hidden sm:block">
-                    <button class="bg-white px-8 py-4 font-bold text-grey-400 rounded-full">Informasi</button>
-                    <button class="bg-sky-600 px-4 py-2 font-bold text-white rounded-full">Buku Tamu</button>
+    <nav class="py-9 px-4 opacity-75 bg-wave" x-data="{navOpen:false}">
+        <div>
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center">
+                    <img src="<?=base_url("img/logo.svg")?>" alt="logo" class=" text-white w-[36%] sm:w-[23%] lg:w-[18%] order-1 sm:order-2">
+                    <ion-icon @click="navOpen = !navOpen" name="menu-outline" class="lg:hidden text-4xl bg-white sm:order-1 order-3"></ion-icon>
+                    <div class="order-2 hidden lg:block">
+                        <ul class="flex gap-16">
+                            <li>
+                                <a href="#" class="text-white bg-pink-800 px-4 rounded-full py-3 font-bold">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white bg-pink-800 px-4 rounded-full py-3 font-bold hover:opacity-100">Profil</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white bg-pink-800 px-4 rounded-full py-3 font-bold hover:opacity-100">Galery</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white bg-pink-800 px-4 rounded-full py-3 font-bold hover:opacity-100">Kontak</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-2 hidden sm:block">
+                        <button class="bg-white px-8 py-2 font-bold text-grey-400 rounded-full">Informasi</button>
+                        <button class="bg-white px-8 py-2 font-bold text-sky-800 hover:bg-sky-100 hover:text-gray-500 rounded-full">Buku Tamu</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- navbar bawah -->
-        <div x-show="navOpen"
-                    x-transition:enter="transition ease-out duration-300"
-                    x-transition:enter-start="opacity-0 scale-90"
-                    x-transition:enter-end="opacity-100 scale-100"
-                    x-transition:leave="transition ease-in duration-300"
-                    x-transition:leave-start="opacity-100 scale-100"
-                    x-transition:leave-end="opacity-0 scale-90" 
-             x-data="{open: false}" class="fixed bottom-0 left-0 right-0 p-2 border lg:hidden">
-            <ul class="flex justify-around">
-                <li>
-                    <button class="flex flex-col items-center justify-around gap-1 text-sky-400">
-                        <ion-icon name="home-outline" class="text-[1.3em]"></ion-icon>
-                        <span class="text-[1em] font-bold">Home</span>
-                    </button>
-                </li>
-                <li>
-                    <button class="flex flex-col items-center text-gray-400 justify-around gap-1">
-                        <ion-icon name="business-outline" class="text-[1.3em]"></ion-icon> 
-                        <span class="text-[1em] opacity-50 font-normal">Profil</span>
-                    </button>
-                </li>
-                <li>
-                    <button class="flex flex-col items-center text-gray-400 justify-around gap-1">
-                        <ion-icon name="images-outline" class="text-[1.3em]"></ion-icon>
-                        <span class="text-[1em] opacity-50 font-normal">Galery</span>
-                    </button>
-                </li>
-                <li>
-                    <button class="flex flex-col items-center text-gray-400 justify-around gap-1">
-                        <ion-icon name="aperture-outline" class="text-[1.3em]"></ion-icon>  
-                        <span class="text-[1em] opacity-50 font-normal">Kontak</span>
-                    </button>
-                </li>
-                <li>
-                    <button @click="open = !open" class="flex flex-col items-center text-gray-400 justify-around gap-1">
-                        <ion-icon name="apps-outline" class="text-[1.3em]"></ion-icon> 
-                        <span class="text-[1em] opacity-50 font-normal">Lainnya</span>
-                    </button>
-                </li>
-                
+            <!-- navbar bawah -->
+            <div x-show="navOpen"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-300"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-90" 
+                x-data="{open: false}" class="fixed bottom-0 left-0 right-0 p-2 border lg:hidden">
+                <ul class="flex justify-around">
+                    <li>
+                        <button class="flex flex-col items-center justify-around gap-1 text-sky-400">
+                            <ion-icon name="home-outline" class="text-[1.3em]"></ion-icon>
+                            <span class="text-[1em] font-bold">Home</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="flex flex-col items-center text-gray-400 justify-around gap-1">
+                            <ion-icon name="business-outline" class="text-[1.3em]"></ion-icon> 
+                            <span class="text-[1em] opacity-50 font-normal">Profil</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="flex flex-col items-center text-gray-400 justify-around gap-1">
+                            <ion-icon name="images-outline" class="text-[1.3em]"></ion-icon>
+                            <span class="text-[1em] opacity-50 font-normal">Galery</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="flex flex-col items-center text-gray-400 justify-around gap-1">
+                            <ion-icon name="aperture-outline" class="text-[1.3em]"></ion-icon>  
+                            <span class="text-[1em] opacity-50 font-normal">Kontak</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button @click="open = !open" class="flex flex-col items-center text-gray-400 justify-around gap-1">
+                            <ion-icon name="apps-outline" class="text-[1.3em]"></ion-icon> 
+                            <span class="text-[1em] opacity-50 font-normal">Lainnya</span>
+                        </button>
+                    </li>
+                    
 
-            </ul>
-            <!-- other small screen -->
-            <div x-show="open"
-                    x-transition:enter="transition ease-out duration-300"
-                    x-transition:enter-start="opacity-0 scale-90"
-                    x-transition:enter-end="opacity-100 scale-100"
-                    x-transition:leave="transition ease-in duration-300"
-                    x-transition:leave-start="opacity-100 scale-100"
-                    x-transition:leave-end="opacity-0 scale-90" 
-                    class="absolute bottom-28 left-0 right-0 flex justify-around gap-4">
-                <button href="#" class="flex flex-col items-center justify-around gap-1 text-gray-400">
-                    <ion-icon name="paper-plane-outline" class="text-[1.3em]"></ion-icon>
-                    <span class="text-[1em] font-normal">Informasi</span>
-                </button>
-                <button href="#" class="flex flex-col items-center justify-around gap-1 text-gray-400">
-                    <ion-icon name="home-outline" class="text-[1.3em]"></ion-icon>
-                    <span class="text-[1em] font-normal">Buku Tamu</span>
-                </button>
-               
+                </ul>
+                <!-- other small screen -->
+                <div x-show="open"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-90"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-300"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-90" 
+                        class="absolute bottom-28 left-0 right-0 flex justify-around gap-4">
+                    <button href="#" class="flex flex-col items-center justify-around gap-1 text-gray-400">
+                        <ion-icon name="paper-plane-outline" class="text-[1.3em]"></ion-icon>
+                        <span class="text-[1em] font-normal">Informasi</span>
+                    </button>
+                    <button href="#" class="flex flex-col items-center justify-around gap-1 text-gray-400">
+                        <ion-icon name="home-outline" class="text-[1.3em]"></ion-icon>
+                        <span class="text-[1em] font-normal">Buku Tamu</span>
+                    </button>
+                
+                </div>
             </div>
+            <!-- banner Hero -->
+            <div class="grid grid-cols-12">
+                <!-- content kiri -->
+                <div class="col-span-6 p-6">
+                    <h1 class="text-5xl font-sans-serif text-ellipsis mb-8 leading-tight text-white">Yayasan Amanah Batasa Bahktera</h1>
+                    <p class="mt-3 text-white">Sebagai pembentuk insan yang beriman dan berakhlak mulia serta berbudi luhur memililki wawasan yang luas mampu menjalani sesuai kehidupan jaman</p>
+                    <p class="font-[gotu] font-semibold mt-5 text-white"> 
+                        <ion-icon name="locate-outline"></ion-icon>
+                        Desa Tangkil Kecamatan Caringin Kabupaten Bogor Jawa-Barat
+                    </p>
+                    <div>
+
+                        <button class="bg-pink-500 py-2 px-3 rounded-lg my-8  text-white hover:bg-sky-600">Yuk Kenalan Lebih Jauh</button>
+                    </div>
+                </div>
+
+                <!-- content kanan -->
+                <div class="col-span-6">Righ</div>
+             </div>
+            <!-- End Banner Hero -->
         </div>
+
     </nav>
     <!-- end namvbar -->
-    
-    <!-- hero -->
+
+
+    <!-- content -->
     <section>
-        <div class="grid grid-cols-12">
-            <!-- hero left -->
-            <div class="col-span-8 p-8">
-                <h2>Selamat Datang</h2>
-                <h1 class="font-extrabold text-7xl leading-tight text-wrap">Yayasan Amanah Batasa Bahtera</h1>
-            </div>
-            <!-- hero right -->
-            <div class="col-span-4 p-8">
-               <!-- Slider -->
-<div data-hs-carousel='{
-    "loadingClasses": "opacity-0",
-    "isAutoPlay": true
-  }' class="relative">
-  <div class="hs-carousel relative overflow-hidden w-full min-h-[350px] bg-white rounded-lg">
-    <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
-      <div class="hs-carousel-slide">
-        <div class="flex justify-center h-full bg-gray-100 p-6">
-          <span class="self-center text-4xl transition duration-700">First slide</span>
-        </div>
-      </div>
-      <div class="hs-carousel-slide">
-        <div class="flex justify-center h-full bg-gray-200 p-6">
-          <span class="self-center text-4xl transition duration-700">Second slide</span>
-        </div>
-      </div>
-      <div class="hs-carousel-slide">
-        <div class="flex justify-center h-full bg-gray-300 p-6">
-          <span class="self-center text-4xl transition duration-700">Third slide</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <button type="button" class="hs-carousel-prev hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/[.1]">
-    <span class="text-2xl" aria-hidden="true">
-      <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-      </svg>
-    </span>
-    <span class="sr-only">Previous</span>
-  </button>
-  <button type="button" class="hs-carousel-next hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/[.1]">
-    <span class="sr-only">Next</span>
-    <span class="text-2xl" aria-hidden="true">
-      <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-      </svg>
-    </span>
-  </button>
-
-  <div class="hs-carousel-pagination flex justify-center absolute bottom-3 start-0 end-0 space-x-2">
-    <span class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer"></span>
-    <span class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer"></span>
-    <span class="hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer"></span>
-  </div>
-</div>
-<!-- End Slider -->
-            </div>
-            
-        </div>
+        <h1>Hello Contents</h1>
     </section>
-    <!-- end hero -->
+    <!-- end Content -->
     
     <!-- FOOTER -->
     <footer class="bg-white">
@@ -211,8 +176,7 @@
     </footer>
 
 
-    <!-- ionic -->
-    <script src="./node_modules/preline/dist/preline.js"></script>
+    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>
