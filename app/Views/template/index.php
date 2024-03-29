@@ -11,11 +11,11 @@
 </head>
 <body>
     <!-- navabar -->
-    <nav class="py-9 px-4 opacity-75 bg-wave" x-data="{navOpen:false}">
+    <nav class="py-9 px-4 opacity-75 fixed w-full top-0" x-data="{navOpen:false}">
         <div>
             <div class="container mx-auto">
                 <div class="flex justify-between items-center">
-                    <img src="<?=base_url("img/logo.svg")?>" alt="logo" class=" text-white w-[36%] sm:w-[23%] lg:w-[18%] order-1 sm:order-2">
+                    <img src="<?=base_url("img/logo.svg")?>" alt="logo" class="items-end text-white w-[36%] sm:w-[23%] lg:w-[18%] order-1 sm:order-2">
                     <ion-icon @click="navOpen = !navOpen" name="menu-outline" class="lg:hidden text-4xl bg-white sm:order-1 order-3"></ion-icon>
                     <div class="order-2 hidden lg:block">
                         <ul class="flex gap-16">
@@ -41,14 +41,15 @@
             </div>
             <!-- navbar bawah -->
             <div x-show="navOpen"
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 scale-90"
-                        x-transition:enter-end="opacity-100 scale-100"
-                        x-transition:leave="transition ease-in duration-300"
-                        x-transition:leave-start="opacity-100 scale-100"
-                        x-transition:leave-end="opacity-0 scale-90" 
-                x-data="{open: false}" class="fixed bottom-0 left-0 right-0 p-2 border lg:hidden">
-                <ul class="flex justify-around">
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="scale-100"
+                x-transition:leave-end="opacity-0 scale-90" 
+                x-data="{open: false}" 
+                class="fixed bottom-0 left-0 right-0 p-2 lg:hidden bg-white bg-opacity-90 shadow-lg ">
+                <ul class="flex space-x-7 flex-wrap justify-around">
                     <li>
                         <button class="flex flex-col items-center justify-around gap-1 text-sky-400">
                             <ion-icon name="home-outline" class="text-[1.3em]"></ion-icon>
@@ -58,19 +59,19 @@
                     <li>
                         <button class="flex flex-col items-center text-gray-400 justify-around gap-1">
                             <ion-icon name="business-outline" class="text-[1.3em]"></ion-icon> 
-                            <span class="text-[1em] opacity-50 font-normal">Profil</span>
+                            <span class="text-[1em]  font-normal">Profil</span>
                         </button>
                     </li>
                     <li>
                         <button class="flex flex-col items-center text-gray-400 justify-around gap-1">
                             <ion-icon name="images-outline" class="text-[1.3em]"></ion-icon>
-                            <span class="text-[1em] opacity-50 font-normal">Galery</span>
+                            <span class="text-[1em]  font-normal">Galery</span>
                         </button>
                     </li>
                     <li>
                         <button class="flex flex-col items-center text-gray-400 justify-around gap-1">
                             <ion-icon name="aperture-outline" class="text-[1.3em]"></ion-icon>  
-                            <span class="text-[1em] opacity-50 font-normal">Kontak</span>
+                            <span class="text-[1em]  font-normal">Kontak</span>
                         </button>
                     </li>
                     <li>
@@ -102,29 +103,31 @@
                 
                 </div>
             </div>
-            <!-- banner Hero -->
-            <div class="grid grid-cols-12 justify-center items-center">
-                <!-- content kiri -->
-                <div class="col-span-5 p-6">
-                    <h1 class="text-5xl font-sans-serif text-ellipsis mb-8 leading-tight text-white">Yayasan Amanah Batasa Bahktera</h1>
-                    <p class="mt-3 text-white">Sebagai pembentuk insan yang beriman dan berakhlak mulia serta berbudi luhur memililki wawasan yang luas mampu menjalani sesuai kehidupan jaman</p>
-                    <p class="font-[gotu] font-semibold mt-5 text-white"> 
+           
+        </div>
+    </nav>
+    <!-- end namvbar -->
+     <!-- Hero banner-->
+    <div class="flex min-h-[60%] flex-col bg-wave top-52">
+            <!-- content-kiri -->
+            <div class="p-2 mt-2 gap-2 flex flex-col items-center text-center order-2 mb-5">
+                <h1 class="leading-tight text-2xl font-bold text-white font-sans-serif">Yayasan Amanah Batasa Bahtera</h1>
+                <p class="text-white">
+                Sebagai pembentuk insan yang beriman dan berakhlak mulia serta berbudi luhur memililki wawasan yang luas mampu menjalani sesuai kehidupan jaman
+                </p>
+                <p class="font-[gotu] font-semibold mt-5 text-white"> 
                         <ion-icon name="locate-outline"></ion-icon>
                         Desa Tangkil Kecamatan Caringin Kabupaten Bogor Jawa-Barat
                     </p>
                     <div>
-
-                        <button class="bg-pink-500 py-2 px-3 rounded-lg my-8  text-white hover:bg-sky-600">Yuk Kenalan Lebih Jauh</button>
+                        <button   button class="bg-pink-500 py-2 px-3 rounded-lg my-8  text-white hover:bg-sky-600">Yuk Kenalan Lebih Jauh</button>
                     </div>
-                </div>
-
-                <!-- content kanan -->
-                <div class="col-span-7 ">
-                    <!-- carosel -->
-                    <div 
-                    class="max-w-2xl mx-auto relative"
-                    x-data="{
-                        activeSlide:1,
+            </div>
+            <!-- conten kanan -->
+            <div class="p-4 order-1 mt-28">
+                <!-- carosel -->
+                <div class="relative" x-data="{
+                    activeSlide:1,
                         slides:[
                                 {id:1,title:'Slide1',body:'Lorem, ipsum 1 dolor sit amet consectetur adipisicing elit. Asperiores, numquam?'},
                                 {id:2,title:'Slide2',body:'Lorem, ipsum 2 dolor sit amet consectetur adipisicing elit. Asperiores, numquam?'},
@@ -132,74 +135,81 @@
                                 {id:4,title:'Slide4',body:'Lorem, ipsum 4 dolor sit amet consectetur adipisicing elit. Asperiores, numquam?'},
                                 {id:5,title:'Slide5',body:'Lorem, ipsum 5 dolor sit amet consectetur adipisicing elit. Asperiores, numquam?'}
                                 
-                            ],
-                            loop(){
-                                setInterval(()=>{this.activeSlide = this.activeSlide === this.slides.length ? this.slides[0].id : this.activeSlide + 1},2000)
-                            }
-                        }"
-                        x-init="loop"
-                        > 
-                        <!-- data lloping -->
-                        <template x-for="slide in slides" :key="slide.id">
-                            <div x-show="activeSlide === slide.id" 
-                                 class="p-24 h-80 flex items-center bg-slate-500 text-white rounded-lg opacity-30">
-                                 <div>
-                                    <h2 class="text-2xl font-bold" x-text="slide.title"></h2>
-                                    <p class="text-base" x-text="slide.body"></p>
-                                 </div>
-                                    
-                            </div>
-                            
-                        </template>
+                        ],
+                        loop(){
+                                setInterval(()=>{this.activeSlide = this.activeSlide === this.slides.length ? this.slides[0].id : this.activeSlide + 1},3000)
+                        }
+                }" x-init="loop">
 
-                        <!-- tombole prev/next -->
-                        <div class="absolute inset-0 flex justify-center">
-                            <div class="flex items-center justify-start w-1/2 -ml-12">
-                                    <button  
-                                    x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1"
-                                    class="w-12 h-12 rounded-full font-bold hover:bg-sky-400 hover:text-white"> 
-                                        <ion-icon name="arrow-back-circle-outline" class="w-12 h-12 text-white"></ion-icon>
-                                    </button>
-                            </div>
-                            <div class="flex items-center justify-end w-full -mr-12">
+                    <!-- data looping -->
+                    <template x-for="slide in slides" 
+                    class="p3" 
+                    :key="slide.id">
+                        <div x-show="activeSlide === slide.id" 
+                             class="py-10 px-4 min-h-[80%] flex items-center  text-white rounded-lg bg-blue-300 bg-opacity-15">
+                             <div>
+                                <h2 class="text-2xl font-bold" x-text="slide.title"></h2>
+                                <p class="text-base" x-text="slide.body"></p>
+                             </div>
+
+                        </div>
+
+                    </template>
+                    
+                    <!-- tombol prev/next -->
+                    <div class="absolute justify-center inset-0 hidden">
+
+                        <div class="flex items-center justify-start w-1/2">
+                            <button x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide-1"
+                            class="w-12 h-12 rounded-full">
+                                <ion-icon name="arrow-back-circle-outline" class="w-12 h-12 text-white"></ion-icon>
+                            </button>
+
+                        </div>
+                        <div class="flex items-center justify-end w-full -mr-12">
                                     <button
                                     x-on:click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1"
                                      class=" w-12 h-12 rounded-full font-bold hover:bg-sky-400 hover:text-white"> 
                                     <ion-icon name="arrow-forward-circle-outline" class="w-12 h-12 text-white"></ion-icon>
                                     </button>
-                            </div>
                         </div>
 
-                        <!-- button -->
-                        <div class="absolute w-full flex items-center justify-center px-4 py-5">
-                            <template x-for="slide in slides" :key="slide.id">
-                                <button class="flex-1 h-2 w-4 mb-2 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-slate-600 hover:shadow-lg" :class="{
-                                    'bg-red-400' : activeSlide === slide.id,
-                                    'bg-slate-300' :activeSlide !== slide.id
-                                }"
-                                x-on:click="activeSlide = slide.id"
-                                ></button>
-                            </template>
-                        </div>
                     </div>
-                </div>
-             </div>
-            <!-- End Banner Hero -->
-        </div>
 
-    </nav>
-    <!-- end namvbar -->
+                    <!-- indicator button -->
+                    <div class="absolute w-full flex items-center justify-center px-4 py-2 gap-4">
+                    
+                        <template x-for="slide in slides" :key="slide.id">
+                            <button 
+                            class="flex-1 h-1  mb-2 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-bg-slate-600 hover:shadow-lg"
+                            :class="{
+                                'bg-pink-500' : activeSlide === slide.id,
+                                'bg-slate-400' : activeSlide !== slide.id
+                            }"  x-on:click="activeSlide=slide.id">
+
+                            </button>
+                        </template>
+
+                    </div>
+
+                </div>
+                <!-- end Carosel -->
+
+            </div>
+            
+    </div>
+        <!-- end Hero baner -->
 
 
     <!-- content -->
-    <section>
+    <section class="min-h-svh">
         <h1>Hello Contents</h1>
     </section>
     <!-- end Content -->
     
     <!-- FOOTER -->
-    <footer class="bg-white">
-        <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+    <footer class="bg-slate-700 fixed hidden lg:block bottom-0 left-0 right-0">
+        <div class="mx-auto max-w-7xl px-6 py-4 md:flex md:items-center md:justify-between lg:px-8">
             <div class="flex justify-center space-x-6 md:order-2">
             <a href="#" class="text-gray-400 hover:text-gray-500">
                 <span class="sr-only">Facebook</span>

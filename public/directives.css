@@ -16,7 +16,7 @@
         background-position: top;
         background-size: cover;
         top: 0;
-        z-index: -1000000;
+        /* z-index: -100000000; */
         background-repeat: no-repeat;
     }
 }
