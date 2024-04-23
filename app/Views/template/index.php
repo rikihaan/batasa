@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- navabar -->
-    <nav class="py-9 px-4 opacity-75 fixed w-full top-0" x-data="{navOpen:false}">
+    <nav class="py-9 px-4 fixed w-full top-0 z-40" x-data="{navOpen:false}">
         <div>
             <div class="container mx-auto">
                 <div class="flex justify-between items-center">
@@ -48,7 +48,7 @@
                 x-transition:leave-start="scale-100"
                 x-transition:leave-end="opacity-0 scale-90" 
                 x-data="{open: false}" 
-                class="fixed bottom-0 left-0 right-0 p-2 lg:hidden bg-white bg-opacity-90 shadow-lg ">
+                class="fixed bottom-0 left-0 right-0 p-2 lg:hidden bg-red-800 shadow-lg">
                 <ul class="flex space-x-7 flex-wrap justify-around">
                     <li>
                         <button class="flex flex-col items-center justify-around gap-1 text-sky-400">
@@ -77,7 +77,7 @@
                     <li>
                         <button @click="open = !open" class="flex flex-col items-center text-gray-400 justify-around gap-1">
                             <ion-icon name="apps-outline" class="text-[1.3em]"></ion-icon> 
-                            <span class="text-[1em] opacity-50 font-normal">Lainnya</span>
+                            <span class="text-[1em] font-normal">Lainnya</span>
                         </button>
                     </li>
                     
@@ -91,7 +91,7 @@
                         x-transition:leave="transition ease-in duration-300"
                         x-transition:leave-start="opacity-100 scale-100"
                         x-transition:leave-end="opacity-0 scale-90" 
-                        class="absolute bottom-28 left-0 right-0 flex justify-around gap-4">
+                        class="absolute bottom-28 left-0 right-0 flex justify-around gap-4 bg-slate-600">
                     <button href="#" class="flex flex-col items-center justify-around gap-1 text-gray-400">
                         <ion-icon name="paper-plane-outline" class="text-[1.3em]"></ion-icon>
                         <span class="text-[1em] font-normal">Informasi</span>
@@ -143,7 +143,7 @@
 
                     <!-- data looping -->
                     <template x-for="slide in slides" 
-                    class="p3" 
+                    class="p3 -z-20" 
                     :key="slide.id">
                         <div x-show="activeSlide === slide.id" 
                              class="py-10 px-4 min-h-[80%] flex items-center  text-white rounded-lg bg-blue-300 bg-opacity-15">
@@ -196,14 +196,76 @@
                 <!-- end Carosel -->
 
             </div>
+
+          
             
     </div>
         <!-- end Hero baner -->
 
+       <!-- statistik -->
+    <div class="-mt-12">
+                        
+        <div class="w-32 h-20 bg-white shadow-lg relative rounded-lg">
+            <div class="w-5 h-5 absolute bg-pink-500 rounded-full -right-1 -top-1 animate-ping"></div>  
+            <ion-icon name="person" class="size-7"></ion-icon>
+        </div>
+
+    </div>
+
+   
+
 
     <!-- content -->
-    <section class="min-h-svh">
-        <h1>Hello Contents</h1>
+    <section class="min-h-svh p-4">
+
+        <!--  -->
+                            
+        <!-- title -->
+        <div class="m-auto flex justify-center">
+            <h2 class="text-purple-400 font-bold">Informasi Terbaru</h2>  
+        </div>
+
+        <!-- card information -->
+        <div class="min-h-56 mt-4 shadow-lg shadow-slate-500 rounded-xl p-4">
+            <h1 class="text-slate-600 font-extrabold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae saepe facere cupiditate.</h1>
+            <!-- time and add user information -->
+            <div class="flex justify-start items-center gap-4">
+                <div class="flex items-center text-gray-600 font-normal text-xs">
+                    <!-- time -->
+                    <ion-icon name="time" class="mr-1"></ion-icon>
+                    <span>20 Jan 2024-10:40:66 WIB</span>
+                </div>
+                <div class="font-bold text-gray-500 text-xs flex items-center">
+                    <!-- user upload or updated -->
+                    <ion-icon name="person" class="mr-1"></ion-icon> 
+                    <small>Asep Riki</small>
+                </div>
+            </div>
+            <!-- card image and description -->
+            <div class="flex flex-row gap-1 mt-1">
+                <div>
+                    <img src="https://picsum.photos/300" alt="">
+                </div>
+                <div class="leading-2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur.
+                </div>
+            </div>
+            <!-- views,like,and commment information -->
+            <div class="my-2 flex justify-around gap-4 text-gray-500 text-sm">
+                <a href="#" class="flex items-center gap-2 cursor-pointer">
+                    <span>100K</span>
+                    <ion-icon name="eye"></ion-icon>
+                </a>
+                <div class="flex items-center gap-2">
+                    <span>100K</span>
+                    <ion-icon name="heart"></ion-icon>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span>100K</span>
+                    <ion-icon name="mail-unread"></ion-icon>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- end Content -->
     
@@ -248,8 +310,6 @@
          </div>
     </footer>
 
-
-    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 </html>
