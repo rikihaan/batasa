@@ -108,9 +108,9 @@
     </nav>
     <!-- end namvbar -->
      <!-- Hero banner-->
-    <div class="flex min-h-[60%] flex-col bg-wave top-52">
+    <div class="flex min-h-[60%] flex-col bg-wave top-52 lg:grid lg:grid-cols-12">
             <!-- content-kiri -->
-            <div class="p-2 mt-2 gap-2 flex flex-col items-center text-center order-2 mb-5">
+            <div class="p-2 mt-2 gap-2 flex flex-col items-center text-center order-2 mb-5 lg:order-1 lg:col-span-6">
                 <h1 class="leading-tight text-2xl font-bold text-white font-sans-serif">Yayasan Amanah Batasa Bahtera</h1>
                 <p class="text-white">
                 Sebagai pembentuk insan yang beriman dan berakhlak mulia serta berbudi luhur memililki wawasan yang luas mampu menjalani sesuai kehidupan jaman
@@ -124,7 +124,7 @@
                     </div>
             </div>
             <!-- conten kanan -->
-            <div class="p-4 order-1 mt-28">
+            <div class="p-4 order-1 lg:order-2 mt-28 lg:col-span-6 lg:self-center">
                 <!-- carosel -->
                 <div class="relative" x-data="{
                     activeSlide:1,
@@ -146,7 +146,7 @@
                     class="p3 -z-20" 
                     :key="slide.id">
                         <div x-show="activeSlide === slide.id" 
-                             class="py-10 px-4 min-h-[80%] flex items-center  text-white rounded-lg bg-blue-300 bg-opacity-15">
+                             class="py-10 px-4 min-h-[90%] h-60 flex items-end text-white rounded-lg bg-blue-300 bg-opacity-15 sm:bg-red-400 sm:h-64 sm:flex sm:items-end">
                              <div>
                                 <h2 class="text-2xl font-bold" x-text="slide.title"></h2>
                                 <p class="text-base" x-text="slide.body"></p>
@@ -196,18 +196,42 @@
                 <!-- end Carosel -->
 
             </div>
-
-          
-            
     </div>
         <!-- end Hero baner -->
 
        <!-- statistik -->
-    <div class="-mt-12">
-                        
-        <div class="w-32 h-20 bg-white shadow-lg relative rounded-lg">
-            <div class="w-5 h-5 absolute bg-pink-500 rounded-full -right-1 -top-1 animate-ping"></div>  
-            <ion-icon name="person" class="size-7"></ion-icon>
+    <div class="-mt-10 flex justify-around w-full overflow-hidden">
+        <!-- card information -->
+        <div class="w-32 h-20 md:w-60 shadow-lg bg-white relative rounded-lg">
+            <div class="w-5 h-5 md:w-10 md:h-10 absolute rounded-full bg-pink-600 -right-1 -top-1 animate-ping"></div>
+            <div class="flex items-center justify-center md:justify-around w-32 h-20 md:w-60 px-2 gap-2"> 
+                <ion-icon name="person" class="size-12 md:size-16 text-gray-400"></ion-icon>
+                <div class="flex flex-col items-center">
+                    <small class="text-2xl font-extrabold text-pink-500 md:text-3xl">100</small>
+                    <small class="text-base font-thin text-gray-400 md:text-2xl">Siswa</small>
+                </div>
+            </div>  
+        </div>
+
+        <div class="w-32 h-20 md:w-60 shadow-lg bg-white relative rounded-lg">
+            <div class="w-5 h-5 md:w-10 md:h-10 absolute rounded-full bg-pink-600 -right-1 -top-1 animate-ping"></div>
+            <div class="flex items-center justify-center md:justify-around w-32 h-20 md:w-60 px-2 gap-2"> 
+                <ion-icon name="person" class="size-12 md:size-16 text-gray-400"></ion-icon>
+                <div class="flex flex-col items-center">
+                    <small class="text-2xl font-extrabold text-pink-500 md:text-3xl">100</small>
+                    <small class="text-base font-thin text-gray-400 md:text-2xl">Guru</small>
+                </div>
+            </div>  
+        </div>
+        <div class="w-32 h-20 md:w-60 shadow-lg bg-white relative rounded-lg">
+            <div class="w-5 h-5 md:w-10 md:h-10 absolute rounded-full bg-pink-600 -right-1 -top-1 animate-ping"></div>
+            <div class="flex items-center justify-center md:justify-around w-32 h-20 md:w-60 px-2 gap-2"> 
+                <ion-icon name="person" class="size-12 md:size-16 text-gray-400"></ion-icon>
+                <div class="flex flex-col items-center">
+                    <small class="text-2xl font-extrabold text-pink-500 md:text-3xl">100</small>
+                    <small class="text-base font-thin text-gray-400 md:text-2xl">Sarana</small>
+                </div>
+            </div>  
         </div>
 
     </div>
@@ -221,51 +245,174 @@
         <!--  -->
                             
         <!-- title -->
-        <div class="m-auto flex justify-center">
-            <h2 class="text-purple-400 font-bold">Informasi Terbaru</h2>  
+        <div class="m-auto flex justify-center mt-20">
+            <h2 class="text-purple-400 font-bold text-2xl">Informasi Terbaru</h2>  
         </div>
 
         <!-- card information -->
-        <div class="min-h-56 mt-4 shadow-lg shadow-slate-500 rounded-xl p-4">
-            <h1 class="text-slate-600 font-extrabold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae saepe facere cupiditate.</h1>
-            <!-- time and add user information -->
-            <div class="flex justify-start items-center gap-4">
-                <div class="flex items-center text-gray-600 font-normal text-xs">
-                    <!-- time -->
-                    <ion-icon name="time" class="mr-1"></ion-icon>
-                    <span>20 Jan 2024-10:40:66 WIB</span>
+        <div class="grid grid-cols-12 gap-3">
+            <div class="min-h-56 col-span-12 sm:col-span-6 md:col-span-4 2xl:col-span-3 mt-4 shadow-lg shadow-slate-500 rounded-xl p-4 sm:flex-col">
+                <h1 class="text-slate-600 font-extrabold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae saepe facere cupiditate.</h1>
+                <!-- time and add user information -->
+                <div class="flex justify-start items-center gap-4">
+                    <div class="flex items-center text-gray-600 font-normal text-xs">
+                        <!-- time -->
+                        <ion-icon name="time" class="mr-1"></ion-icon>
+                        <span>20 Jan 2024 - 10:40:66 WIB</span>
+                    </div>
+                    <div class="font-bold text-gray-500 text-xs flex items-center">
+                        <!-- user upload or updated -->
+                        <ion-icon name="person" class="mr-1"></ion-icon> 
+                        <small>Asep Riki</small>
+                    </div>
                 </div>
-                <div class="font-bold text-gray-500 text-xs flex items-center">
-                    <!-- user upload or updated -->
-                    <ion-icon name="person" class="mr-1"></ion-icon> 
-                    <small>Asep Riki</small>
+                <!-- card image and description -->
+                <div class="flex flex-row gap-1 mt-1">
+                    <div>
+                        <img src="https://picsum.photos/300" alt="">
+                    </div>
+                    <div class="leading-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur.
+                    </div>
+                </div>
+                <!-- views,like,and commment information -->
+                <div class="my-2 flex justify-around gap-4 text-gray-500 text-sm">
+                    <a href="#" class="flex items-center gap-2 cursor-pointer">
+                        <span>100K</span>
+                        <ion-icon name="eye"></ion-icon>
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <span>100K</span>
+                        <ion-icon name="heart"></ion-icon>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span>100K</span>
+                        <ion-icon name="mail-unread"></ion-icon>
+                    </div>
                 </div>
             </div>
-            <!-- card image and description -->
-            <div class="flex flex-row gap-1 mt-1">
-                <div>
-                    <img src="https://picsum.photos/300" alt="">
+            <div class="min-h-56 col-span-12 sm:col-span-6 md:col-span-4 2xl:col-span-3 mt-4 shadow-lg shadow-slate-500 rounded-xl p-4 sm:flex-col">
+                <h1 class="text-slate-600 font-extrabold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae saepe facere cupiditate.</h1>
+                <!-- time and add user information -->
+                <div class="flex justify-start items-center gap-4">
+                    <div class="flex items-center text-gray-600 font-normal text-xs">
+                        <!-- time -->
+                        <ion-icon name="time" class="mr-1"></ion-icon>
+                        <span>20 Jan 2024-10:40:66 WIB</span>
+                    </div>
+                    <div class="font-bold text-gray-500 text-xs flex items-center">
+                        <!-- user upload or updated -->
+                        <ion-icon name="person" class="mr-1"></ion-icon> 
+                        <small>Asep Riki</small>
+                    </div>
                 </div>
-                <div class="leading-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur.
+                <!-- card image and description -->
+                <div class="flex flex-row gap-1 mt-1">
+                    <div>
+                        <img src="https://picsum.photos/300" alt="">
+                    </div>
+                    <div class="leading-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur.
+                    </div>
+                </div>
+                <!-- views,like,and commment information -->
+                <div class="my-2 flex justify-around gap-4 text-gray-500 text-sm">
+                    <a href="#" class="flex items-center gap-2 cursor-pointer">
+                        <span>100K</span>
+                        <ion-icon name="eye"></ion-icon>
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <span>100K</span>
+                        <ion-icon name="heart"></ion-icon>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span>100K</span>
+                        <ion-icon name="mail-unread"></ion-icon>
+                    </div>
+                </div>
+            </div>  
+            <div class="min-h-56 col-span-12 sm:col-span-6 md:col-span-4 2xl:col-span-3 mt-4 shadow-lg shadow-slate-500 rounded-xl p-4 sm:flex-col">
+                <h1 class="text-slate-600 font-extrabold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae saepe facere cupiditate.</h1>
+                <!-- time and add user information -->
+                <div class="flex justify-start items-center gap-4">
+                    <div class="flex items-center text-gray-600 font-normal text-xs">
+                        <!-- time -->
+                        <ion-icon name="time" class="mr-1"></ion-icon>
+                        <span>20 Jan 2024-10:40:66 WIB</span>
+                    </div>
+                    <div class="font-bold text-gray-500 text-xs flex items-center">
+                        <!-- user upload or updated -->
+                        <ion-icon name="person" class="mr-1"></ion-icon> 
+                        <small>Asep Riki</small>
+                    </div>
+                </div>
+                <!-- card image and description -->
+                <div class="flex flex-row gap-1 mt-1">
+                    <div>
+                        <img src="https://picsum.photos/300" alt="">
+                    </div>
+                    <div class="leading-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur.
+                    </div>
+                </div>
+                <!-- views,like,and commment information -->
+                <div class="my-2 flex justify-around gap-4 text-gray-500 text-sm">
+                    <a href="#" class="flex items-center gap-2 cursor-pointer">
+                        <span>100K</span>
+                        <ion-icon name="eye"></ion-icon>
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <span>100K</span>
+                        <ion-icon name="heart"></ion-icon>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span>100K</span>
+                        <ion-icon name="mail-unread"></ion-icon>
+                    </div>
                 </div>
             </div>
-            <!-- views,like,and commment information -->
-            <div class="my-2 flex justify-around gap-4 text-gray-500 text-sm">
-                <a href="#" class="flex items-center gap-2 cursor-pointer">
-                    <span>100K</span>
-                    <ion-icon name="eye"></ion-icon>
-                </a>
-                <div class="flex items-center gap-2">
-                    <span>100K</span>
-                    <ion-icon name="heart"></ion-icon>
+            <div class="min-h-56 col-span-12 sm:col-span-6 md:col-span-4 2xl:col-span-3 mt-4 shadow-lg shadow-slate-500 rounded-xl p-4 sm:flex-col">
+                <h1 class="text-slate-600 font-extrabold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae saepe facere cupiditate.</h1>
+                <!-- time and add user information -->
+                <div class="flex justify-start items-center gap-4">
+                    <div class="flex items-center text-gray-600 font-normal text-xs">
+                        <!-- time -->
+                        <ion-icon name="time" class="mr-1"></ion-icon>
+                        <span>20 Jan 2024-10:40:66 WIB</span>
+                    </div>
+                    <div class="font-bold text-gray-500 text-xs flex items-center">
+                        <!-- user upload or updated -->
+                        <ion-icon name="person" class="mr-1"></ion-icon> 
+                        <small>Asep Riki</small>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2">
-                    <span>100K</span>
-                    <ion-icon name="mail-unread"></ion-icon>
+                <!-- card image and description -->
+                <div class="flex flex-row gap-1 mt-1">
+                    <div>
+                        <img src="https://picsum.photos/300" alt="">
+                    </div>
+                    <div class="leading-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur.
+                    </div>
+                </div>
+                <!-- views,like,and commment information -->
+                <div class="my-2 flex justify-around gap-4 text-gray-500 text-sm">
+                    <a href="#" class="flex items-center gap-2 cursor-pointer">
+                        <span>100K</span>
+                        <ion-icon name="eye"></ion-icon>
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <span>100K</span>
+                        <ion-icon name="heart"></ion-icon>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span>100K</span>
+                        <ion-icon name="mail-unread"></ion-icon>
+                    </div>
                 </div>
             </div>
         </div>
+       
     </section>
     <!-- end Content -->
     
