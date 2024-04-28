@@ -108,9 +108,9 @@
     </nav>
     <!-- end namvbar -->
      <!-- Hero banner-->
-    <div class="flex min-h-[60%] flex-col bg-wave top-52 lg:grid lg:grid-cols-12">
+    <div class="flex min-h-[60%] lg:min-h-[34rem] flex-col bg-wave top-52 lg:grid lg:grid-cols-12">
             <!-- content-kiri -->
-            <div class="p-2 mt-2 gap-2 flex flex-col items-center text-center order-2 mb-5 lg:order-1 lg:col-span-6">
+            <div class="p-2 mt-2 gap-2 flex flex-col items-center text-center  lg:self-center order-2 mb-5 lg:mb-0 lg:order-1 lg:col-span-6">
                 <h1 class="leading-tight text-2xl font-bold text-white font-sans-serif">Yayasan Amanah Batasa Bahtera</h1>
                 <p class="text-white">
                 Sebagai pembentuk insan yang beriman dan berakhlak mulia serta berbudi luhur memililki wawasan yang luas mampu menjalani sesuai kehidupan jaman
@@ -124,7 +124,7 @@
                     </div>
             </div>
             <!-- conten kanan -->
-            <div class="p-4 order-1 lg:order-2 mt-28 lg:col-span-6 lg:self-center">
+            <div class="p-4 order-1 lg:order-2 mt-28 lg:mt-0 lg:col-span-6 lg:self-center">
                 <!-- carosel -->
                 <div class="relative" x-data="{
                     activeSlide:1,
@@ -415,6 +415,54 @@
        
     </section>
     <!-- end Content -->
+
+    <!-- contact -->
+    <section class="min-h-svh p-4">
+        <!-- title -->
+        <div>
+            <h2 class="text-purple-400 text-5xl">Contact</h2>
+            <div class="flex gap-2 justify-around items-center">
+                <div class="mt-4 flex flex-col gap-3">
+                    <div class="flex flex-col">
+                        <small class="font-normal text-base text-green-900">Hubungi Kami</small>
+                        <span>+62 857-7747-1378</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <small class="font-normal text-base text-green-900">E-mail</small>
+                        <span>yayasan.batasa@gmail.com</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                  
+                    <div>
+                        <div class="flex justify-start gap-1 items-center">
+                            <ion-icon name="logo-instagram" class="size-5 text-pink-500"></ion-icon>
+                            <small class="font-light">@yayasanbatasa</small>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-start gap-1 items-center">
+                            <ion-icon name="logo-twitter" class="size-5 text-blue-500"></ion-icon>
+                            <small class="font-light">@yayasanbatasa</small>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-start gap-1 items-center">
+                            <ion-icon name="logo-facebook" class="size-5 text-blue-600"></ion-icon>
+                            <small class="font-light">@yayasanbatasa</small>
+                        </div>
+                    </div>  
+                    <div>
+                        <div class="flex justify-start gap-1 items-center">
+                            <ion-icon name="logo-youtube" class="size-5 text-pink-800"></ion-icon>
+                            <small class="font-light">@yayasanbatasa</small>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            
+        </div>
+    </section>
     
     <!-- FOOTER -->
     <footer class="bg-slate-700 fixed hidden lg:block bottom-0 left-0 right-0">
